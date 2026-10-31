@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1246a0">
+<title>QUIZ GUINÉE — Apprendre en s'amusant</title>
+<style>
+:root{--blue:#1246a0;--blue2:#2563eb;--pale:#eef4ff;--ink:#14213d;--muted:#64748b;--line:#dbe5f3;--white:#fff;--green:#15803d;--red:#b91c1c;--shadow:0 14px 35px rgba(18,70,160,.10)}
+*{box-sizing:border-box}body{margin:0;background:#f6f9ff;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.5}button,input{font:inherit}button{cursor:pointer}.topbar{background:linear-gradient(120deg,#103b89,#2563eb);color:white;padding:18px 16px}.nav{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.12rem;letter-spacing:.3px}.logo{width:40px;height:40px;border-radius:13px;background:white;color:var(--blue);display:grid;place-items:center;font-weight:1000}.nav small{opacity:.85}.hero{max-width:1100px;margin:28px auto 22px;padding:30px 24px;background:linear-gradient(120deg,#123d8b,#2563eb);border-radius:24px;color:white;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"?";position:absolute;right:7%;top:-45px;font-size:240px;font-weight:1000;color:#ffffff12}.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0 0 12px;max-width:650px}.hero p{max-width:620px;color:#e3edff;margin:0 0 20px}.wrap{max-width:1100px;margin:auto;padding:0 16px 50px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 28px}.stat,.panel,.category,.quizbox{background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 5px 18px rgba(15,45,90,.04)}.stat{padding:15px}.stat b{display:block;font-size:1.35rem;color:var(--blue)}.stat span{font-size:.85rem;color:var(--muted)}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 14px}.sectionhead h2{margin:0;font-size:1.45rem}.sectionhead p{margin:3px 0 0;color:var(--muted);font-size:.9rem}.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.category{padding:18px;text-align:left;transition:.18s;border:1px solid var(--line);color:var(--ink)}.category:hover{transform:translateY(-3px);border-color:#8db2f7;box-shadow:var(--shadow)}.caticon{width:46px;height:46px;border-radius:14px;background:var(--pale);display:grid;place-items:center;font-size:1.45rem;margin-bottom:12px}.category h3{margin:0 0 4px}.category p{margin:0;color:var(--muted);font-size:.88rem}.category .count{display:inline-block;margin-top:13px;color:var(--blue);font-size:.82rem;font-weight:750}.lower{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:22px}.panel{padding:18px}.panel h3{margin:0 0 12px}.rules{padding-left:20px;margin:0;color:var(--muted)}.rules li{margin:7px 0}.primary,.secondary,.ghost{border:0;border-radius:12px;padding:12px 17px;font-weight:750}.primary{background:white;color:var(--blue)}.primary.blue{background:var(--blue2);color:white}.secondary{background:var(--pale);color:var(--blue)}.ghost{background:#f1f5f9;color:var(--ink)}button:focus-visible,input:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}.hidden{display:none!important}.quizbox{padding:clamp(17px,4vw,28px);max-width:760px;margin:24px auto}.quiztop{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:.9rem}.progress{height:9px;background:#e7eef9;border-radius:20px;overflow:hidden;margin:14px 0 24px}.progress>div{height:100%;background:linear-gradient(90deg,#2563eb,#60a5fa);width:0;transition:width .2s}.quizbox h2{font-size:1.35rem;line-height:1.35}.answers{display:grid;gap:10px;margin:20px 0}.answer{padding:14px;text-align:left;border:1.5px solid var(--line);border-radius:13px;background:white;color:var(--ink);font-weight:650}.answer:hover{border-color:#6b9cf0;background:#f8fbff}.answer.selected{border-color:var(--blue2);background:#eff6ff}.answer.correct{border-color:#22a05a;background:#f0fdf4}.answer.wrong{border-color:#dc6b6b;background:#fff5f5}.feedback{padding:13px;border-radius:12px;margin:14px 0;background:#f1f5f9;color:var(--ink)}.feedback.good{background:#f0fdf4;color:#166534}.feedback.bad{background:#fff1f2;color:#9f1239}.actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.result{text-align:center}.score{font-size:3.4rem;color:var(--blue);font-weight:950;line-height:1.1;margin:14px}.muted{color:var(--muted)}.field{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;margin:8px 0 12px}.leaderrow{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);gap:10px}.footer{text-align:center;color:var(--muted);font-size:.85rem;padding:24px 12px}.notice{font-size:.83rem;color:var(--muted);background:#f8fafc;border:1px solid var(--line);padding:12px;border-radius:12px;margin-top:12px}
+@media(max-width:760px){.categories{grid-template-columns:repeat(2,1fr)}.lower{grid-template-columns:1fr}.hero{margin-top:16px;padding:25px 19px}.stats{gap:8px}.stat{padding:12px}.stat span{font-size:.78rem}}@media(max-width:430px){.categories{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats .stat:last-child{grid-column:span 2}.nav small{display:none}.hero h1{font-size:2.1rem}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="nav"><div class="brand"><div class="logo">QG</div><div>QUIZ GUINÉE<br><small>Apprendre · Jouer · Progresser</small></div></div><small>Plateforme éducative</small></div></header>
+<main class="wrap">
+<section id="home">
+  <div class="hero"><h1>Teste tes connaissances.<br>Progresse à ton rythme.</h1><p>Des quiz simples et amusants pour apprendre la culture générale, les sciences, les mathématiques, le français et l'informatique.</p><button class="primary" onclick="document.getElementById('categories').scrollIntoView({behavior:'smooth'})">Commencer un quiz →</button></div>
+  <div class="stats"><div class="stat"><b id="played">0</b><span>Quiz terminés sur cet appareil</span></div><div class="stat"><b id="best">—</b><span>Meilleur score</span></div><div class="stat"><b>100%</b><span>Gratuit pour commencer</span></div></div>
+  <div class="sectionhead" id="categories"><div><h2>Choisis une catégorie</h2><p>Sélectionne un thème et réponds aux questions.</p></div></div>
+  <div class="categories" id="categoryGrid"></div>
+  <div class="lower"><section class="panel"><h3>Comment jouer ?</h3><ol class="rules"><li>Choisis une catégorie.</li><li>Lis chaque question et sélectionne une réponse.</li><li>Découvre immédiatement si ta réponse est correcte.</li><li>À la fin, consulte ton score et recommence pour progresser.</li></ol></section><section class="panel"><h3>Meilleurs scores sur cet appareil</h3><div id="leaderboard"><p class="muted">Aucun score enregistré pour le moment.</p></div><div class="notice">Les scores sont enregistrés uniquement dans le navigateur de cet appareil. Le classement n'est pas encore partagé entre les utilisateurs.</div></section></div>
+</section>
+<section id="quizScreen" class="hidden">
+  <div class="quizbox">
+    <div class="quiztop"><button class="ghost" onclick="goHome()">← Accueil</button><span id="quizCategory"></span></div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="quiztop"><span id="questionCount"></span><span id="liveScore">Score : 0</span></div>
+    <h2 id="questionText"></h2><div id="answers" class="answers"></div>
+    <div id="feedback" class="feedback hidden" aria-live="polite"></div>
+    <div class="actions"><button id="nextBtn" class="primary blue" disabled onclick="nextQuestion()">Valider la réponse</button><span class="muted" id="tip">Choisis une réponse pour continuer.</span></div>
+  </div>
+</section>
+<section id="resultScreen" class="hidden">
+ <div class="quizbox result"><div class="caticon" style="margin:0 auto">🏆</div><h2>Quiz terminé !</h2><p class="muted" id="resultCategory"></p><div class="score" id="finalScore">0/0</div><p id="resultMessage"></p>
+ <label for="playerName" style="display:block;text-align:left;font-weight:700">Ton prénom (facultatif)</label><input class="field" id="playerName" maxlength="20" placeholder="Ex. Aïssatou">
+ <div class="actions"><button class="secondary" onclick="goHome()">Retour à l'accueil</button><button class="primary blue" onclick="saveScore()">Enregistrer mon score</button><button class="ghost" onclick="replay()">Rejouer</button></div>
+ <p class="notice">Pour cette première version, ton score reste enregistré sur ton téléphone. Aucun compte ni paiement n'est demandé.</p></div>
+</section>
+</main>
+<footer class="footer">© <span id="year"></span> QUIZ GUINÉE · Première version de démonstration</footer>
+<script>
+const quizData = [
+ {id:"culture",name:"Culture générale",icon:"🌍",desc:"Découvre le monde et ses connaissances.",questions:[
+  ["Quelle est la capitale de la Guinée ?",["Kindia","Conakry","Labé","Kankan"],1,"Conakry est la capitale de la République de Guinée."],
+  ["Combien y a-t-il de jours dans une année bissextile ?",["364","365","366","367"],2,"Une année bissextile compte 366 jours."],
+  ["Quel océan borde la côte guinéenne ?",["Océan Indien","Océan Atlantique","Océan Arctique","Océan Pacifique"],1,"La Guinée possède une façade maritime sur l'océan Atlantique."],
+  ["Combien de continents compte-t-on généralement ?",["5","6","7","8"],2,"On compte généralement sept continents."],
+  ["Quelle monnaie est utilisée en Guinée ?",["Franc guinéen","Naira","Cedi","Dalasi"],0,"La monnaie nationale est le franc guinéen (GNF)."]]},
+ {id:"maths",name:"Mathématiques",icon:"➗",desc:"Entraîne-toi avec les nombres et les calculs.",questions:[
+  ["Combien font 12 × 8 ?",["86","92","96","108"],2,"12 multiplié par 8 donne 96."],
+  ["Quel est le résultat de 45 + 27 ?",["62","72","78","82"],1,"45 + 27 = 72."],
+  ["Quelle est la moitié de 150 ?",["50","65","75","80"],2,"La moitié de 150 est 75."],
+  ["Combien vaut 9² ?",["18","72","81","99"],2,"9² signifie 9 × 9, donc 81."],
+  ["Un triangle a combien de côtés ?",["2","3","4","5"],1,"Un triangle possède trois côtés."]]},
+ {id:"francais",name:"Français",icon:"📚",desc:"Vocabulaire, grammaire et conjugaison.",questions:[
+  ["Quel est le pluriel de « cheval » ?",["Chevals","Chevaux","Chevaus","Chevales"],1,"Le pluriel usuel de cheval est chevaux."],
+  ["Dans « Mariam mange une mangue », quel est le verbe ?",["Mariam","mange","une","mangue"],1,"« Mange » est le verbe de la phrase."],
+  ["Quel mot est un adjectif ?",["Rapidement","Courir","Magnifique","Maison"],2,"« Magnifique » est un adjectif qualificatif."],
+  ["Quel est l'infinitif de « nous finissons » ?",["Finir","Fini","Finissant","Finissons"],0,"L'infinitif du verbe est finir."],
+  ["Quel est le contraire de « généreux » ?",["Gentil","Avare","Joyeux","Calme"],1,"« Avare » exprime le contraire de généreux."]]},
+ {id:"sciences",name:"Sciences",icon:"🔬",desc:"Explore le vivant, la matière et la nature.",questions:[
+  ["Quelle planète est surnommée la planète rouge ?",["Vénus","Mars","Jupiter","Mercure"],1,"Mars paraît rougeâtre à cause des oxydes de fer présents à sa surface."],
+  ["Quel organe permet principalement de respirer ?",["Le cœur","Les poumons","L'estomac","Le foie"],1,"Les poumons assurent les échanges gazeux lors de la respiration."],
+  ["À quelle température l'eau bout-elle au niveau de la mer ?",["50 °C","75 °C","100 °C","120 °C"],2,"Au niveau de la mer, l'eau bout autour de 100 °C."],
+  ["Quelle partie de la plante absorbe surtout l'eau du sol ?",["La fleur","La feuille","La racine","Le fruit"],2,"Les racines absorbent l'eau et les sels minéraux du sol."],
+  ["Quel gaz les humains utilisent-ils pour respirer ?",["Oxygène","Hélium","Méthane","Hydrogène"],0,"L'organisme utilise l'oxygène pour la respiration cellulaire."]]},
+ {id:"informatique",name:"Informatique",icon:"💻",desc:"Découvre les bases du numérique.",questions:[
+  ["Que signifie généralement le sigle HTML ?",["HyperText Markup Language","High Transfer Machine Link","Home Tool Modern Language","Hyperlink Text Main Logic"],0,"HTML signifie HyperText Markup Language."],
+  ["Quel appareil permet de déplacer le pointeur à l'écran ?",["Imprimante","Souris","Routeur","Clé USB"],1,"La souris sert notamment à déplacer le pointeur."],
+  ["Lequel est un navigateur web ?",["Chrome","Excel","Bluetooth","Android"],0,"Google Chrome est un navigateur web."],
+  ["À quoi sert principalement un clavier ?",["Afficher des images","Saisir du texte","Imprimer des feuilles","Refroidir le téléphone"],1,"Le clavier sert à saisir du texte et des commandes."],
+  ["Que désigne le Wi-Fi ?",["Une technologie de réseau sans fil","Un type de batterie","Un langage de programmation","Un format d'image"],0,"Le Wi-Fi permet notamment de connecter des appareils à un réseau sans fil."]]},
+ {id:"geographie",name:"Géographie",icon:"🗺️",desc:"Pays, capitales et repères du monde.",questions:[
+  ["Sur quel continent se trouve la Guinée ?",["Asie","Afrique","Europe","Amérique"],1,"La Guinée se trouve en Afrique de l'Ouest."],
+  ["Quelle est la capitale du Sénégal ?",["Bamako","Dakar","Banjul","Freetown"],1,"Dakar est la capitale du Sénégal."],
+  ["Quel est le plus vaste océan du monde ?",["Atlantique","Indien","Pacifique","Arctique"],2,"L'océan Pacifique est le plus vaste."],
+  ["Quel pays a pour capitale Bamako ?",["Mali","Niger","Tchad","Bénin"],0,"Bamako est la capitale du Mali."],
+  ["Dans quelle direction le soleil se lève-t-il ?",["Nord","Sud","Est","Ouest"],2,"Le soleil apparaît à l'est et se couche à l'ouest."]]}
+];
+let currentCategory=null,currentIndex=0,score=0,selected=null,answered=false,lastResult=null;
+const $=id=>document.getElementById(id);
+function renderCategories(){ $("categoryGrid").innerHTML=quizData.map(c=>`<button class="category" onclick="startQuiz('${c.id}')"><div class="caticon">${c.icon}</div><h3>${c.name}</h3><p>${c.desc}</p><span class="count">${c.questions.length} questions · Commencer →</span></button>`).join("");}
+function getScores(){try{return JSON.parse(localStorage.getItem("qg_scores")||"[]")}catch(e){return[]}}
+function updateStats(){let s=getScores();$("played").textContent=s.length;$("best").textContent=s.length?Math.max(...s.map(x=>x.percent))+"%":"—";$("leaderboard").innerHTML=s.length?s.slice().sort((a,b)=>b.percent-a.percent).slice(0,5).map((x,i)=>`<div class="leaderrow"><span>${i+1}. ${escapeHTML(x.name)} <small class="muted">· ${escapeHTML(x.category)}</small></span><b>${x.percent}%</b></div>`).join(""):'<p class="muted">Aucun score enregistré pour le moment.</p>';}
+function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function showOnly(id){["home","quizScreen","resultScreen"].forEach(x=>$(x).classList.toggle("hidden",x!==id));window.scrollTo({top:0,behavior:"smooth"});}
+function startQuiz(id){currentCategory=quizData.find(x=>x.id===id);currentIndex=0;score=0;renderQuestion();showOnly("quizScreen");}
+function renderQuestion(){let q=currentCategory.questions[currentIndex];selected=null;answered=false;$("quizCategory").textContent=currentCategory.icon+" "+currentCategory.name;$("questionCount").textContent=`Question ${currentIndex+1} / ${currentCategory.questions.length}`;$("liveScore").textContent="Score : "+score;$("progressBar").style.width=(currentIndex/currentCategory.questions.length*100)+"%";$("questionText").textContent=q[0];$("answers").innerHTML=q[1].map((a,i)=>`<button class="answer" data-index="${i}" onclick="chooseAnswer(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join("");$("feedback").className="feedback hidden";$("feedback").textContent="";$("nextBtn").disabled=true;$("nextBtn").textContent="Valider la réponse";$("tip").textContent="Choisis une réponse pour continuer.";}
+function chooseAnswer(i){if(answered)return;selected=i;document.querySelectorAll(".answer").forEach(b=>b.classList.toggle("selected",Number(b.dataset.index)===i));$("nextBtn").disabled=false;}
+function nextQuestion(){if(selected===null)return;if(!answered){let q=currentCategory.questions[currentIndex],ok=selected===q[2];answered=true;if(ok)score++;document.querySelectorAll(".answer").forEach((b,i)=>{b.disabled=true;if(i===q[2])b.classList.add("correct");else if(i===selected)b.classList.add("wrong");});$("feedback").className="feedback "+(ok?"good":"bad");$("feedback").textContent=(ok?"Bonne réponse ! ":"Ce n'est pas la bonne réponse. ")+q[3];$("liveScore").textContent="Score : "+score;$("nextBtn").textContent=currentIndex===currentCategory.questions.length-1?"Voir mon résultat":"Question suivante";$("tip").textContent="";return;}if(currentIndex<currentCategory.questions.length-1){currentIndex++;renderQuestion();}else finishQuiz();}
+function finishQuiz(){let total=currentCategory.questions.length,percent=Math.round(score/total*100);lastResult={category:currentCategory.name,score,total,percent};$("progressBar").style.width="100%";$("resultCategory").textContent=currentCategory.name;$("finalScore").textContent=score+" / "+total;$("resultMessage").textContent=percent===100?"Excellent ! Tu as répondu correctement à toutes les questions.":percent>=60?"Bravo ! Continue à t'entraîner pour progresser.":"Continue tes efforts : chaque quiz est une occasion d'apprendre.";showOnly("resultScreen");}
+function saveScore(){if(!lastResult)return;let name=$("playerName").value.trim()||"Anonyme";let s=getScores();s.push({name,category:lastResult.category,percent:lastResult.percent,score:lastResult.score,date:new Date().toISOString()});s=s.slice(-30);try{localStorage.setItem("qg_scores",JSON.stringify(s));}catch(e){alert("Le navigateur ne permet pas d'enregistrer le score.");return;}updateStats();$("playerName").value="";alert("Score enregistré sur cet appareil !");}
+function replay(){if(currentCategory)startQuiz(currentCategory.id);}
+function goHome(){showOnly("home");updateStats();}
+$("year").textContent=new Date().getFullYear();renderCategories();updateStats();
+</script>
+</body>
+</html>
